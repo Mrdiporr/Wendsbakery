@@ -1,0 +1,75 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-decoration: none;
+  color: var(--foreground);
+}
+
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover .image {
+  transform: scale(1.08);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.quickView {
+  background: white;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.category {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent-pink); /* Pink accent */
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-family: var(--font-sans);
+  font-weight: 400;
+}
+
+.price {
+  font-size: 0.95rem;
+  font-weight: 500;
+}

@@ -1,0 +1,288 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ── Hero ────────────────────────────────────────── */
+.hero {
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  padding-top: 88px;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  flex: 1;
+  padding-right: 4rem;
+  z-index: 2;
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.heroTag {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.heroTitle {
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+  line-height: 1.1;
+}
+
+.heroTitle span {
+  color: var(--primary);
+}
+
+.heroDesc {
+  font-size: 1.1rem;
+  color: var(--foreground);
+  opacity: 0.8;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.heroImageContainer {
+  flex: 1;
+  position: relative;
+  height: 600px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba(0,0,0,0.12);
+  animation: slideLeft 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.heroImage {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.heroImageContainer:hover .heroImage {
+  transform: scale(1.03);
+}
+
+/* ── Trust strip ─────────────────────────────────── */
+.trustStrip {
+  background: var(--foreground);
+  color: var(--background);
+  padding: 1.25rem 0;
+}
+
+.trustGrid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.trustIcon {
+  font-size: 1.2rem;
+}
+
+/* ── Sections ────────────────────────────────────── */
+.section {
+  padding: 6rem 0;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.sectionDesc {
+  color: var(--foreground);
+  opacity: 0.7;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+/* ── CTA section ─────────────────────────────────── */
+.ctaSection {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.ctaSection .sectionTitle,
+.ctaSection .sectionDesc,
+.ctaSection .heroTag {
+  color: #fff;
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ctaSection .btn {
+  background: #fff;
+  color: var(--secondary);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.ctaSection .btn:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+}
+
+/* ── About ───────────────────────────────────────── */
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.aboutText {
+  animation: slideUp 0.6s ease;
+}
+
+.aboutBadges {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.badge {
+  background: var(--background);
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.badge:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.badge strong {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.badge span {
+  font-size: 0.82rem;
+  opacity: 0.7;
+}
+
+/* ── Footer ──────────────────────────────────────── */
+.footer {
+  background: var(--foreground);
+  color: var(--background);
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.footerLogo {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.footerSub {
+  opacity: 0.75;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.footerCopy {
+  opacity: 0.4;
+  font-size: 0.8rem;
+}
+
+/* ── Animations ──────────────────────────────────── */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+    min-height: auto;
+    padding-bottom: 4rem;
+  }
+  .heroContent {
+    padding-right: 0;
+    margin-bottom: 3rem;
+  }
+  .heroDesc {
+    margin: 0 auto 2.5rem;
+  }
+  .heroActions {
+    justify-content: center;
+  }
+  .heroImageContainer {
+    width: 100%;
+    height: 400px;
+    flex: none;
+  }
+  .heroTitle {
+    font-size: 3rem;
+  }
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .trustGrid {
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroTitle { font-size: 2.4rem; }
+  .sectionTitle { font-size: 2rem; }
+  .aboutBadges { grid-template-columns: 1fr 1fr; }
+}

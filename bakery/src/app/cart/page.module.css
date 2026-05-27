@@ -1,0 +1,301 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 2rem 6rem;
+}
+
+.pageTitle {
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+}
+
+/* ── Empty state ──────────────────────────────── */
+.emptyState {
+  text-align: center;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.emptyIcon {
+  font-size: 5rem;
+  display: block;
+  margin-bottom: 1rem;
+  opacity: 0.4;
+}
+
+.emptyState h2 {
+  font-size: 1.8rem;
+}
+
+.emptyState p {
+  opacity: 0.65;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Two-column layout ────────────────────────── */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ── Items list ───────────────────────────────── */
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.itemsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.clearBtn {
+  color: var(--secondary);
+  font-size: 0.85rem;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.clearBtn:hover {
+  opacity: 0.7;
+}
+
+/* ── Single item row ──────────────────────────── */
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+  animation: fadeIn 0.3s ease;
+}
+
+.itemImage {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--border);
+}
+
+.itemImg {
+  object-fit: cover;
+}
+
+.itemImgPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  opacity: 0.5;
+}
+
+.itemInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.itemName {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.itemName:hover {
+  color: var(--primary);
+}
+
+.itemUnitPrice {
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.itemControls {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.qtyRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 4px 8px;
+}
+
+.qtyBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--border);
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  line-height: 1;
+}
+
+.qtyBtn:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.qty {
+  font-weight: 600;
+  font-size: 1rem;
+  min-width: 20px;
+  text-align: center;
+}
+
+.itemLineTotal {
+  font-weight: 700;
+  font-size: 1.05rem;
+  min-width: 70px;
+  text-align: right;
+}
+
+.removeBtn {
+  color: var(--border);
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.removeBtn:hover {
+  color: var(--secondary);
+}
+
+/* ── Summary sidebar ──────────────────────────── */
+.summary {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  padding: 2rem;
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.summaryTitle {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.summaryTotal {
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-bottom: none;
+  padding-top: 1rem;
+  margin-top: 0.25rem;
+}
+
+.pickupNotice {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  background: rgba(217, 130, 43, 0.08);
+  border: 1px solid rgba(217, 130, 43, 0.25);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.checkoutBtn {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.05rem;
+  padding: 14px;
+  margin-bottom: 1rem;
+}
+
+.continueLink {
+  text-align: center;
+  font-size: 0.88rem;
+  opacity: 0.6;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  margin-bottom: 1.5rem;
+}
+
+.continueLink:hover {
+  opacity: 1;
+  color: var(--primary);
+}
+
+.trustRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  opacity: 0.5;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* ── Animation ────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Responsive ───────────────────────────────── */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .summary {
+    position: static;
+  }
+  .pageTitle {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .item {
+    flex-wrap: wrap;
+  }
+  .itemControls {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

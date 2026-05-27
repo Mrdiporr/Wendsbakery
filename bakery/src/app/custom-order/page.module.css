@@ -1,0 +1,264 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ── Hero ─────────────────────────────────────── */
+.hero {
+  background: linear-gradient(145deg, var(--foreground) 0%, #5c3317 100%);
+  color: var(--background);
+  padding: 160px 2rem 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(217, 130, 43, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(217, 130, 43, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.heroInner {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  animation: slideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.heroTag {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1.25rem;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #fdfaf6;
+}
+
+.heroTitle span {
+  color: var(--primary);
+}
+
+.heroDesc {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  color: #fdfaf6;
+}
+
+.heroBadges {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.heroBadge {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  padding: 6px 18px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fdfaf6;
+  backdrop-filter: blur(6px);
+}
+
+/* ── How it works ─────────────────────────────── */
+.howItWorks {
+  background: var(--surface);
+  padding: 5rem 2rem;
+}
+
+.howTitle {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3.5rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+
+.steps::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: calc(12.5% + 1rem);
+  right: calc(12.5% + 1rem);
+  height: 2px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  opacity: 0.3;
+}
+
+.step {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.stepNum {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 16px rgba(217, 130, 43, 0.3);
+}
+
+.stepTitle {
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+}
+
+.stepDesc {
+  font-size: 0.87rem;
+  opacity: 0.65;
+  line-height: 1.6;
+}
+
+/* ── Form section ─────────────────────────────── */
+.formSection {
+  padding: 5rem 2rem;
+  background: var(--background);
+}
+
+.formLayout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.formMain {
+  min-width: 0;
+}
+
+/* ── Sidebar ──────────────────────────────────── */
+.formSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 100px;
+}
+
+.sideCard {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.sideCardTitle {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sideCardDesc {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  opacity: 0.75;
+  margin-bottom: 1rem;
+}
+
+.sideList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.sideList li {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  opacity: 0.8;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.sideList li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-size: 0.75rem;
+}
+
+.igBtn {
+  display: block;
+  text-align: center;
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.igBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* ── Animations ───────────────────────────────── */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ───────────────────────────────── */
+@media (max-width: 1024px) {
+  .formLayout {
+    grid-template-columns: 1fr;
+  }
+  .formSidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .steps::before { display: none; }
+  .heroTitle { font-size: 2.8rem; }
+}
+
+@media (max-width: 600px) {
+  .steps { grid-template-columns: 1fr; }
+  .heroTitle { font-size: 2.2rem; }
+  .formSidebar { grid-template-columns: 1fr; }
+}

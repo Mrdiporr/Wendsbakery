@@ -1,0 +1,12 @@
+.addBtn {
+  flex: 1;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-size: 1rem;
+}
+
+.added {
+  background-color: #2e7d32 !important;
+  box-shadow: 0 4px 16px rgba(46, 125, 50, 0.4) !important;
+  transform: scale(1.02);
+}
