@@ -1,0 +1,46 @@
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.next/
+out/
+dist/
+
+# PHP/Laravel
+vendor/
+.env
+.env.local
+.env.*.local
+storage/
+bootstrap/cache/
+database/database.sqlite
+database/database.sqlite-journal
+
+# Build outputs
+build/
+.cache/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Local development
+capture.js
+C:\Users\TV\Desktop\wendysbakehouse\
+
+# Testing
+coverage/
+.phpunit.result.cache
+
+# Deployment artifacts
+*.zip
+*.tar.gz
